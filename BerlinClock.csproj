@@ -50,6 +50,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDD\BerlinClockFeatureSteps.cs" />
+    <Compile Include="Classes\Core\BerlinClockData.cs" />
+    <Compile Include="Classes\Core\BerlinClockDefinition.cs" />
+    <Compile Include="Classes\Core\ITimeToBerlinClockDataConverter.cs" />
+    <Compile Include="Classes\TimeParsers\ParsedTimeWithExtraMidnight.cs" />
+    <Compile Include="Classes\Renderers\StringBerlinClockRenderer.cs" />
+    <Compile Include="Classes\TimeParsers\ITimeWithExtraMidnightParser.cs" />
+    <Compile Include="Classes\TimeParsers\FormatTimeWithExtraMidnightParser.cs" />
+    <Compile Include="Classes\Utils\ExtensionMethods.cs" />
+    <Compile Include="Classes\Renderers\IBerlinClockRenderer.cs" />
+    <Compile Include="Classes\Core\TimeToBerlinClockDataConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BDD\BerlinClockFeatureSteps.feature.cs">
       <AutoGen>True</AutoGen>
@@ -58,6 +68,9 @@
     </Compile>
     <Compile Include="Classes\ITimeConverter.cs" />
     <Compile Include="Classes\TimeConverter.cs" />
+    <Compile Include="UnitTests\FormatTimeWithExtraMidnightParserTests.cs" />
+    <Compile Include="UnitTests\StringBerlinClockRendererTests.cs" />
+    <Compile Include="UnitTests\TimeToBerlinClockDataConverterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -70,6 +83,7 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
