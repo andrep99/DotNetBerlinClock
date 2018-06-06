@@ -50,9 +50,9 @@ namespace BerlinClock.Classes.TimeParsers
             };
         }
 
-        private ParsedTimeWithExtraMidnight ParseUsingDateTime(string aTime)
+        private ParsedTimeWithExtraMidnight ParseUsingDateTime(string time)
         {
-            var timeParsedTmp = DateTime.ParseExact(aTime, _timeFormat, CultureInfo.InvariantCulture);
+            var timeParsedTmp = DateTime.ParseExact(time, _timeFormat, CultureInfo.InvariantCulture);
             return new ParsedTimeWithExtraMidnight()
             {
                 Hours = timeParsedTmp.Hour,
